@@ -1,0 +1,48 @@
+Vagrant.configure("2") do |config|
+ config.vm.define "node1" do |node1|
+  node1.vm.box = "bento/centos-6.7"
+  node1.vm.network "private_network", ip: "192.168.33.7"
+  node1.vm.hostname = "searchead.mylab.com"
+  end
+ config.vm.define "node2" do |node2|
+  node2.vm.box = "bento/centos-6.7"
+  node2.vm.network "private_network", ip: "192.168.33.2"
+  node2.vm.hostname = "indexer1.mylab.com"
+  node2.vm.provider "virtualbox" do |v|
+   v.memory = 2048
+   v.cpus = 2
+   end
+  end
+ config.vm.define "node3" do |node3|
+  node3.vm.box = "bento/centos-6.7"
+  node3.vm.network "private_network", ip: "192.168.33.3"
+  node3.vm.hostname = "forwarder.mylab.com"
+  end
+ config.vm.define "node4" do |node4|
+  node4.vm.box = "bento/centos-6.7"
+  node4.vm.network "private_network", ip: "192.168.33.4"
+  node4.vm.hostname = "deployment.mylab.com"
+  end
+ config.vm.define "node5" do |node5|
+  node5.vm.box = "bento/centos-6.7"
+  node5.vm.network "private_network", ip: "192.168.33.5"
+  node5.vm.hostname = "indexer2.mylab.com"
+  node5.vm.provider "virtualbox" do |v|
+   v.memory = 2048
+   v.cpus = 2
+   end
+  end
+ config.vm.define "node6" do |node6|
+  node6.vm.box = "bento/centos-6.7"
+  node6.vm.network "private_network", ip: "192.168.33.6"
+  node6.vm.hostname = "cluster.mylab.com"
+  end
+ end
+
+==============
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.vm.network "private_network", ip: "192.168.33.23"
+  config.vm.hostname = "ansiblemanaged.mylab.com"
+  end
