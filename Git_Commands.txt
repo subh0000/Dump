@@ -1,0 +1,22 @@
+Git Commands:
+
+1. Local Repo Configuration on Local Machine// GIT configuration:
+-----------------------------------------------------------------
+a. go to local repo directory and execute # git init
+b. Configure your signatiure # git config --global user.name "Subhasish G"
+                             # git config --global user.email "subhasish000@gmail.com"
+							 
+c. Create any type of file in the same repo path and check # git status
+                                                           (Note: It will show the file and ask you to add the file)
+														   # git add <F_NAME>
+														   # git commit -m "MSG" (In between use command like # git status/ # git log / # git diff / # git log --oneline)
+														   # git reset --soft HEAD^ ( To move to the previous version)
+														
+d. Create branches in git hub through web UI
+
+e. Switching Branch in Local Repo  # git checkout <branch_name>
+                                   # git checkout -b <branch_name> ( To create a new Branch)
+
+f. Push it to respective branch of git hub # git push -u origin <branch_name>
+
+g. Move File from one branch to another, go to the destination branch by using git checkout command # git merge <branch_name> (Here the source branch from where code will be copied)				
